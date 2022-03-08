@@ -1,0 +1,16 @@
+<div *ngIf="user" class="container">
+    <div class="user-container">
+        <div>
+            <span>{{user.id}}</span>
+            <span>{{user.name}}</span>
+        </div>
+      <span>{{user.username}}</span>
+      <div class="contacts">
+        <span>{{user.email}}</span>
+        <span>{{user.phone}}</span>
+        <span>{{user.website}}</span>
+      </div>
+    </div>
+
+    <app-address *ngIf="user.address" [address] = "user.address"></app-address>
+  </div>
